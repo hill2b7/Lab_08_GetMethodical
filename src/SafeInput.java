@@ -22,7 +22,11 @@ public class SafeInput
 
 
 
-
+    /**
+     * @param pipe   a Scanner opened to read from System.in
+     * @param prompt prompt for the user
+     * @return an int that is not a double or string value
+     */
     public static int getInt(Scanner pipe, String prompt)
     {
         int retVal = 0;
@@ -48,6 +52,14 @@ public class SafeInput
         return retVal;
     }
 
+
+    /**
+     * @param pipe   a Scanner opened to read from System.in
+     * @param prompt prompt for the user
+     * @param low range start
+     * @param high range end
+     * @return a range of a double value
+     */
     public static double getRangedDouble(Scanner pipe,String prompt, double low , double high)
     {
         double retVal = 0;
@@ -77,6 +89,14 @@ public class SafeInput
         return retVal;
     }
 
+
+    /**
+     * @param pipe   a Scanner opened to read from System.in
+     * @param prompt prompt for the user
+     * @param low range start
+     * @param high range end
+     * @return an int that is within the range
+     */
     public static int getRangedInt(Scanner pipe, String prompt, int low, int high)
     {
         int retVal = 0;
@@ -107,6 +127,13 @@ public class SafeInput
         while(!done);
         return retVal;
     }
+
+
+    /**
+     * @param pipe   a Scanner opened to read from System.in
+     * @param prompt prompt for the user
+     * @return a double that is valid or not a string
+     */
     public static double getDouble(Scanner pipe, String prompt)
     {
         double retVal = 0;
@@ -133,6 +160,12 @@ public class SafeInput
         return retVal;
 
     }
+
+    /**
+     * @param pipe   a Scanner opened to read from System.in
+     * @param prompt prompt for the user
+     * @return a boolean response
+     */
     public static boolean getYNConfirm(Scanner pipe, String prompt)
     {
         boolean retVal = true;
@@ -160,6 +193,13 @@ public class SafeInput
 
         return retVal;
     }
+
+    /**
+     * @param pipe   a Scanner opened to read from System.in
+     * @param prompt prompt for the user
+     * @param regEx pattern for the user
+     * @return a String response that matches the pattern given
+     */
     public static String getRegExString(Scanner pipe, String prompt, String regEx)
     {
         String response = "";
@@ -182,6 +222,11 @@ public class SafeInput
 
         return response;
     }
+
+    /**
+     * @param msg The message that will be echoed in the program
+     * @return a String response that is not zero length
+     */
     public static void prettyHeader(String msg)
     {
 
